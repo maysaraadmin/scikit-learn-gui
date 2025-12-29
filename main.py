@@ -1,4 +1,8 @@
 import sys
+import warnings
+# Suppress all deprecation warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 import pandas as pd
 import numpy as np
 from io import StringIO
@@ -22,6 +26,9 @@ from sklearn.svm import SVC
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
+# Suppress SIP deprecation warning
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 class SklearnGUI(QMainWindow):
     def __init__(self):
